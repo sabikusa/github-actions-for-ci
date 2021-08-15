@@ -54,12 +54,11 @@ jobs:
         CI: true
 
 on: pull_request_review
-  name: Label approved pull requests
-    jobs:
-      labelWhenApproved:
+  jobs:
+    labelWhenApproved:
       name: Label when approved
       runs-on: ubuntu-latest
-      steps:
+    steps:
     - name: Label when approved
       uses: pullreminders/label-when-approved-action@master
       env:
